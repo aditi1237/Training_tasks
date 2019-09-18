@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function capsOnly(e)
+		{
+			var x=document.getElementById('txtnum').value;
+			if(!(e.which>=65 && e.which<=90)){
+		 	e.preventDefault();}
+		}
+		function alphOnly(e)
+		{
+			var y=document.getElementById('txtalp').value;
+			if(!(e.which>=65 && e.which<=90 || e.which>=97 && e.which<=122)){
+		 	e.preventDefault();}
+		}
+		function chngcur()
+		{
+			document.getElementById("myP").style.cursor = "pointer";
+		}
+		function hideimg()
+		{
+			if(document.getElementById("div"))
+			{
+				document.getElementById('div').style.visibility = 'hidden';
+			}
+		}
+		function getCoordinates(event)
+		{
+    		var cx=console.log(event.clientX);
+    		var cy=console.log(event.clientY);
+    		document.write("<p>"+cx+","+cy+"</p>");
+    	}
+    	function newwin()
+    	{
+    		window.open("https://www.google.com", "_blank", "toolbar=yes,top=500,left=500,width=1000,height=1000");
+    	}	
+    	function pop()
+    	{
+    		window.alert("Ping Ping!");
+    	}
+    	function popname()
+    	{
+    		var fn = document.getElementById("fn").value;
+    		var ln = document.getElementById("ln").value;
+    		window.alert(fn+" "+ln);
+    	}
+    	function convert()
+    	{
+    		 var dollar = prompt("Enter currency in $",0);
+  			if (dollar != 0) {
+  				Rupee = dollar * 71;
+   			 document.getElementById("p1").innerHTML = Rupee;
+   		}
+    	}
+	</script>
+	<title></title>
+</head>
+<body >
+<input type="text" name="" id="txtnum" onkeypress="capsOnly(event)" placeholder="Enter Caps Only"><br><br>
+<input type="text" name="" id="txtalp" onkeypress="alphOnly(event)" placeholder="Enter Alphabets Only">
+<p id="myP" onmouseover="chngcur()">Change Cursor!</p>
+<div id="div" onclick="hideimg()"><img SRC="download.jpg" BORDER="0"> </div>
+<input type="submit" value="GetPosition" id="gp">
+        <script>
+            var pos = "";
+            function printMousePos(event) {
+                pos = "X: " + event.clientX +
+                " - Y: " + event.clientY;
+                document.getElementById("gp").value = pos;
+            }
+            document.addEventListener("click", printMousePos);
+            
+       </script>
+<br>
+<input type="submit" value="Click to open new window" onclick="newwin()" name=""><br>
+<input type="submit" value="Popup alert!!" onclick="pop()" name="">
+<br>
+<br>
+<input type="text" id="fn" placeholder="First Name" onkeypress="alphOnly(event)" name=""><br>
+<input type="text" id="ln" placeholder="Last Name" onkeypress="alphOnly(event)" name=""><br>
+<input type="submit" value="Submit Name" onclick="popname()" name=""><br>
+<input type="submit" value="Convert $ to Rupee" onclick="convert()" name=""><br>
+<p id="p1"></p>
+
+
+</body>
+</html>
