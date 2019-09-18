@@ -1,0 +1,77 @@
+Number of digits
+
+#include<stdio.h>
+int main()
+{
+int num=0;
+int i,count = 0;
+printf("Enter the number:");
+scanf("%d",&num);
+while(num%10 != 0)
+{
+	num=num/10;
+	count++;
+}
+printf("%d",count);
+return 0;
+}
+
+Reverse and count
+
+#include <stdio.h>
+
+
+int main(void) 
+{
+
+char arr[]= {'a','d','i','t','i'};
+   
+char rev[5];
+ 
+int count_con=0;
+    
+int count_vow=0;
+    
+int i;
+    
+for(i=0;i<5;i++)
+    {
+        
+printf("%c",arr[i]);
+        
+rev[4-i] = arr[i];
+    }
+    
+printf("\n");
+    
+for(i=0;i<5;i++)
+    {
+        
+printf("%c",rev[i]);
+     
+    }
+    
+printf("\n");
+     
+for(i=0;i<5;i++)
+     {
+         
+if(arr[i] == 'a' || arr[i] == 'e' || arr[i] == 'i'|| arr[i] == 'o'|| arr[i] == 'u' || arr[i] == 'A' || arr[i] == 'E' || arr[i] == 'I'|| arr[i] == 'O'|| arr[i] == 'U'){
+
+            count_vow++;
+         }
+         
+else
+            count_con++;
+            
+     }
+     
+printf("%d",count_vow);
+     
+printf("\n");
+     
+printf("%d",count_con);
+	
+return 0;
+
+}
