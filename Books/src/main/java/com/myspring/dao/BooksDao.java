@@ -51,5 +51,11 @@ public class BooksDao {
 		return result;
 		
 	}
+	@Transactional
+	public Books searchBook(String book_id) {
+		Session session  = sessionfactory.getCurrentSession();
+		Books result=(Books)session.get(Books.class,book_id);
+		return result;
+	}
 	
 }

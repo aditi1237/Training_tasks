@@ -2,14 +2,15 @@
 <%@ page session="false" %>
 <html>
 <head>
-<link href="<c:url value="/resources/style.css" />" rel="stylesheet">
 	<title>Home</title>
+	<link href="<c:url value="/resources/style.css" />" rel="stylesheet">
 </head>
 <body>
-<h1 align="center">Enter the record ID you want to Delete!</h1>
-<form action="deletebook1" style="text-align: center;">
+<h1 align="center">Enter the Book ID to search!</h1>
+
+<form action="searchbook1" style="text-align: center;">
 Enter Book Id:<input type ="text" name ="book_id"><br><br>
-<input type = "submit" value = "DELETE BOOK"> 
+<input type ="submit" value = "SEARCH BOOK"> 
  
 
 

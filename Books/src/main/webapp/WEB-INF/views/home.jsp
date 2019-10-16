@@ -8,7 +8,7 @@
 <body>
 <form style="border:1px solid #ccc">
 <div class="container">
-    <h1>Library</h1>
+    <h1 align="center">Library</h1>
    
     <hr>
     <label for="book_id"><b>Book ID:</b></label>
@@ -36,6 +36,7 @@
       <button type="submit" class="deletebook" formaction="deletebook">Delete book</button>
       
       <button type="submit" class="updatebook" formaction="updatebook">Update book</button>
+       <button type="submit" class="searchbook" formaction="searchbook">Search book</button>
     </div>
 </div>
 </form>

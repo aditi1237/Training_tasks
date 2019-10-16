@@ -3,10 +3,11 @@
 <html>
 <head>
 	<title>Home</title>
+	<link href="<c:url value="/resources/style.css" />" rel="stylesheet">
 </head>
 <body>
 <p>
-<h1 align="center">Fill the details to update...!!!!</h1> 
+<h1 align="center">Enter the Details to Update your record!</h1> 
 </p>
 
 

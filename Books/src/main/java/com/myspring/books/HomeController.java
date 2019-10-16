@@ -71,4 +71,14 @@ public class HomeController {
 		  model.addAttribute("displayList", res);
 		  return "display";
 	  }
+	@RequestMapping(value="/searchbook")
+	public String searchBook() {
+		return "search";
+		}
+	@RequestMapping(value="/searchbook1")
+	public String aBook(Model model,@RequestParam("book_id") String book_id) {
+		Books b=booksdao.searchBook(book_id);
+		model.addAttribute("rescue", b);
+		return "dispsearch";
+		}
 }
