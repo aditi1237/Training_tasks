@@ -1,0 +1,19 @@
+<table>
+  <tr>
+  <td> Author Id </td>
+  <td> Author Name </td>
+  <td> Author Gender </td>
+  <td> Author Status </td>
+  </tr>
+  
+  <tr *ngFor="let author of authors">
+      <td> {{author.authorId}} </td>
+      <td> {{author.authorName|gender:author.authorGender:author.authorStatus}} </td>
+      <td> {{author.authorGender}} </td>
+      <td> {{author.authorStatus}}</td>
+  
+  </tr>
+  
+  
+  </table>
+  
